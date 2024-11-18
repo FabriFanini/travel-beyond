@@ -1,0 +1,567 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+}
+
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    background-color: black;
+    
+}
+
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------
+                                                Aqui empieza el CSS
+----------------------------------------------------------------------------------------------------------------------------------*/
+/* ----VARIANTES----*/
+@font-face {
+    font-family: poppins;
+    src: url("./tipografía/Poppins/Poppins-Regular.ttf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: poppins;
+    src: url("./tipografía/Poppins/Poppins-Bold.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: saira;
+    src: url("./tipografía/Saira/Saira-VariableFont_wdth\,wght.ttf");
+    font-weight: 600;
+}
+
+:root {
+    --primarycolor: #C07A38;
+    --neutralcolor: #F9FCFF;
+    --secondarycolor: #D9985C;
+}
+
+p {
+    font-family: "poppins";
+    font-size: 0.875rem;
+    color: var(--neutralcolor);
+}
+
+h1 {
+    font-family: "saira";
+    font-size: 5.625rem;
+    line-height: 1;
+    color: var(--neutralcolor);
+}
+
+h2 {
+    font-family: "saira";
+    font-size: 3rem;
+    color: var(--neutralcolor);
+    line-height: 3.5rem;
+}
+
+h3 {
+    font-family: "poppins";
+    font-weight: 700;
+    padding-bottom: 1rem;
+    font-size: 0.975rem;
+    color: var(--neutralcolor)
+    
+}
+h4{
+    color: var(--neutralcolor);
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+
+
+.inicio {
+    background-image: url(./img/background/fondo0.png);
+    padding-top: 5rem;
+    height: 100vh;
+    flex-shrink: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 10px;
+
+}
+.inicio_caja {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+}
+
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu {
+    color: var(--neutralcolor);
+    list-style-type: none;
+    font-family: "poppins";
+    font-size: 0.875;
+    display: flex;
+    justify-content: space-around;
+    gap: 3em;
+    align-items: center;
+}
+
+.hamburguesa{
+    display: none;
+}
+a:hover{
+    text-decoration: none;
+    color: var(--secondarycolor);
+}
+.boton_secundario {
+    font-weight: 700;
+    border-radius: 0.3125rem;
+    border: 2px solid var(--neutralcolor);
+    padding: 0.65rem 1.25rem;
+    background-color: transparent;
+    color: var(--neutralcolor);
+    cursor: pointer;
+}
+.boton_secundario:hover{
+    background-color: var(--neutralcolor);
+    color: var(--primarycolor);
+    transition: 0.5s;
+}
+
+.principal_cta h1 {
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+.principal_cta {
+
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    line-height: 2rem;
+} 
+
+.principal__subtitulo {
+    font-size: 1.5rem;
+}
+
+.boton_primario {
+    font-size: 1.25rem;
+    font-weight: 700;
+    width: 11.25rem;
+    height: 3rem;
+    padding: 0.625rem 1.25rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 0.3125rem;
+    border: 0;
+    border-color: var(--primarycolor);
+    background-color: var(--primarycolor);
+    color: var(--neutralcolor);
+    font-family: "poppins";
+    cursor: pointer;
+}
+.boton_primario:hover{
+    background-color: var(--neutralcolor);
+    color: var(--secondarycolor);
+    transition: 0.5s;
+}
+#nosotros{
+    background-image: url(./img/background/planeta\ 1\ \(1\).jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+.nosotros_card{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+    height: 100%;
+    justify-content: center;
+
+}
+
+.nosotros_card p {
+    max-width: 60ch;
+}
+
+.contenedor_principal{
+    background: linear-gradient(180deg, #000 0%, #0F172A 50%);
+}
+#beneficios{
+    background-image: url(./img/background/cohete\ 1.png);
+    background-size: 230px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 120vh;
+    max-width: 85%;
+    margin: 0 auto;
+}
+.beneficios_titulo{
+    text-align: center;
+    margin: 80px;
+}
+.beneficios_grupo_uno{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+}
+.beneficios_card{
+    max-width: 350px; 
+    min-width: 24rem;
+    min-height: 10rem;
+    padding: 20px; 
+    border: 2px solid white; 
+    border-radius: 25px; 
+    margin: 1rem;
+    background-color: rgb(27 34 43 / 90%);
+}
+.beneficios_grupo_dos{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+}
+.beneficios_grupo_tres{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+}
+.icono{
+    width: 40px;
+    height: 35px;
+    margin-bottom: 1rem;
+}
+.contenedor_secundario{
+     background-image: url(./img/background/galaxia_form.png);
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+}
+#testimonios{
+    max-width: 80%;
+    margin: 0 auto;
+    height: 100vh;
+}
+.testimonios_titulo{
+    text-align: center;
+    margin: 100px;
+}
+.testimonios_grupo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.testimonios_card{
+    flex: 1;
+    max-height: 550px;
+    padding: 80px 20px 20px 20px; 
+    border: 2.5px solid var(--Neutral-500, #94A3B8);
+    border-radius: 25px; 
+    margin: 2rem;
+    background-color: rgba(148, 163, 184, 0.35);
+    position: relative;
+    text-align: center;
+
+}
+.testimonios_icono{
+    position: absolute;
+    top: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.testimonio_info{
+    margin-top: 20px;
+}
+.semicirculo {
+    width: 175px;
+    height: 83px;
+    background-color: var(--secondarycolor);
+    border-radius: 100px 100px 0 0;
+    overflow: hidden;
+    position: absolute;
+    top: -85px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+
+
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    height: 130vh;
+}
+.form_titulo{
+    text-align: center;
+    margin: 100px;
+}
+.form_subcontainer{
+    gap: 10px;
+}
+input{
+    border-radius: 4px;
+    border: 1px solid var(--neutralcolor);
+    background: rgba(148, 163, 184, 0.20);
+    padding: 0.625rem 1.25rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--neutralcolor);
+    width: 368px;
+    height: 3rem;
+}
+.preguntero{
+    border-radius: 4px;
+    border: 1px solid var(--neutralcolor);
+    background: rgba(148, 163, 184, 0.20);
+    padding: 0.625rem 1.25rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--neutralcolor);
+    width: 368px;
+    height: 121px;
+}
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: var(--neutralcolor);
+    gap: 10px;
+}
+.placeholder {
+    color: var(--neutralcolor);
+}
+.checkbox{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.politicas{
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    border: 1px solid var(--Neutral-400, #D0D9E6);
+}
+a{
+    color: var(--neutralcolor);
+    text-decoration: none;
+}
+.form_buttom{
+    width: 185.143px;
+    height: 40px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: var(--neutralcolor);
+    background: var(--primary-500-oficial-2, #D9985C);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    font-family: "poppins";
+    cursor: pointer;
+}
+.form_buttom:hover{
+    background-color: var(--neutralcolor);
+    color: var(--secondarycolor);
+    transition: 0.5s;
+}
+footer{
+    background: var(--Neutral-700, #2F405C);
+    height: 100%;
+    padding-bottom: 20px;
+    padding-top: 50px;
+}
+.footer_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.redes{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.politica{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+}
+.derechos{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+.footer_icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    border-bottom: 1px solid var(--Neutral-400, #D0D9E6);
+}
+
+@media (max-width: 1100px) {
+    #beneficios{
+        margin: 0 auto;
+        height: 100%;
+    }
+    .beneficios_grupo_uno{
+        display: flex;
+        flex-direction: column;
+    }
+    .beneficios_grupo_dos{
+        display: flex;
+        flex-direction: column;
+    }
+    .beneficios_grupo_tres{
+        display: flex;
+        flex-direction: column;
+    }
+    #testimonios{
+        margin: 0 auto;
+        height: 100%;
+    }
+    .testimonios_grupo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    .testimonios_card{
+        max-width: 300px;
+        max-height: 400px;
+    }
+}
+
+@media (max-width: 810px) {
+    p {
+        font-size: 0.75;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.875rem;
+        line-height: 2.5rem;
+    }
+
+    /*h3 {
+        font-size: 0.75
+    }*/
+
+     ul {
+        flex-direction: column; /* Cambia a una disposición de columna en pantallas más pequeñas */
+       text-align: center; /* Centra el texto en pantallas más pequeñas */
+    }
+     li {
+        font-size: 0.75;
+        margin-bottom: 10px; /* Agrega espacio entre los elementos en pantallas más pequeñas */}
+    .inicio_caja{
+        gap: 2rem;
+    }
+    .container{ 
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    
+    .menu {
+        display: none;
+    }
+
+    .principal_cta{
+        margin-top: 250px;
+    }
+
+    .hamburguesa{
+        display: block;
+        max-height: 25px;
+        max-width: 25px;
+        
+    }
+
+
+    /* para el menu hamburguesa poner en media display: block y en el html la hamburguesa*/
+
+}
+
